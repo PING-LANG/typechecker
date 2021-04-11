@@ -15,17 +15,11 @@ type Record struct{
     str    string
 }
 
-type Variable struct {
-    container Container
-    record Record
+type Case struct{
+     record Record
+     token Token;
 }
-
-type Expression struct {
-     value1 Record
-     value2 Record
-}
-
 
 func main() {
-  
+    fmt.Println("hello");  
 }
