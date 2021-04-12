@@ -1,6 +1,22 @@
 
-module {
-    fn say() {
-       lib.print "hello"
+author "Krishna Satya"
+module = {
+    say() = {
+       include "streams.stdin"
+       stdin.print "hello"
+       x = {0: 2, 1: 2}
+       
+       case 0 = {
+          true = print "hello"
+	  false = catch Error 
+       }
+
+       loop x.equal 0  = {
+            x.add 1
+       }
+
+       loop x.next i = {
+           print "hello"
+       }
     }
 }

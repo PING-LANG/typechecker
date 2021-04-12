@@ -19,6 +19,10 @@ type Value struct {
      typeIdentifier string
 }
 
+type Error struct {
+     reason Value
+     solution Value
+}
 
 type Block struct{
      identifier Value
