@@ -3,26 +3,27 @@ package main
 import "fmt"
 
 type Container struct{
-    identifier int
+    buffer int
     size int
 }
 
 type Record struct{
-     identifier string
-     typeIdentifier string
+     identifier Value
+     typeIdentifier Value
      block Block;
 }
  
 
 type Value struct {
+     reference Container
      typeIdentifier string
-
 }
 
+
 type Block struct{
-     identifier string
-     method  string
-     args []Value
+     identifier Value
+     method  Value
+     args Map
 }
 
 type Map struct {
@@ -33,7 +34,9 @@ type Map struct {
 
 func main() {
     var record Record
-    record.identifier = "module"
-    record.block.identifier = "x"
-    append(record.block.args, Value{"int"})
+    record.identifier = Value{Container{},"module"}
+    record.block.identifier = Value{Container{},"x"}
+    record.block.method = Value{Container{},"Integer"}
+    record.block.args.key = Value{Container{0,1},"0"}
+    record.block.args.value = Value{Container{0,1},"0"}
 }
