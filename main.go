@@ -14,8 +14,7 @@ type Record struct{
 }
  
 
-type Case struct {
-     identifier string
+type Value struct {
      typeIdentifier string
 
 }
@@ -23,14 +22,18 @@ type Case struct {
 type Block struct{
      identifier string
      method  string
-     args []Case
+     args []Value
+}
+
+type Map struct {
+     key Value
+     value Value
 }
 
 
-
 func main() {
-    record Record
+    var record Record
     record.identifier = "module"
-    record.Block.identifier = "x"
-    append(record.Block.args, Case{})
+    record.block.identifier = "x"
+    append(record.block.args, Value{"int"})
 }
