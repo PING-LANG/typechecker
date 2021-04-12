@@ -8,18 +8,29 @@ type Container struct{
 }
 
 type Record struct{
-    identifier int
-    integer int
-    float float32
-    double float64
-    str    string
+     identifier string
+     typeIdentifier string
+     block Block;
+}
+ 
+
+type Case struct {
+     identifier string
+     typeIdentifier string
+
 }
 
-type Case struct{
-     record Record
-     token Token;
+type Block struct{
+     identifier string
+     method  string
+     args []Case
 }
+
+
 
 func main() {
-    fmt.Println("hello");  
+    record Record
+    record.identifier = "module"
+    record.Block.identifier = "x"
+    append(record.Block.args, Case{})
 }
