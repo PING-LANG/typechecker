@@ -28,17 +28,13 @@ type MethodCall struct {
     args List
 }
 
-type Result struct {
-    value Value
-}
-
 type Case struct {
-    result Result
+    literal Value
      
 }
 
 type Loop struct {
-    result Result
+    literal Result
 }
 
 type Module struct {
