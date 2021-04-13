@@ -37,8 +37,13 @@ type Loop struct {
     literal Result
 }
 
+//module type
+//abstract module
+//design module
+//code module
+
 type Module struct {
-   
+    moduleType int   
 }
 
 func main() {
