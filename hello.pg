@@ -2,6 +2,7 @@
 author "Krishna Satya"
 module = {
     say() = {
+       x Integer 1
        include "streams.stdin"
        stdin.print "hello"
        x = {0: 2, 1: 2}

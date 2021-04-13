@@ -7,13 +7,6 @@ type Container struct{
     size int
 }
 
-type Record struct{
-     identifier Value
-     typeIdentifier Value
-     block Block;
-}
- 
-
 type Value struct {
      reference Container
      typeIdentifier string
@@ -24,23 +17,34 @@ type Error struct {
      solution Value
 }
 
-type Block struct{
-     identifier Value
-     method  Value
-     args Map
+type Declaration struct {
+    typeIdentifier Value
+    name Value
 }
 
-type Map struct {
-     key Value
-     value Value
+type MethodCall struct {
+    identifier Value
+    method Value
+    args List
 }
 
+type Result struct {
+    value Value
+}
+
+type Case struct {
+    result Result
+     
+}
+
+type Loop struct {
+    result Result
+}
+
+type Module struct {
+   
+}
 
 func main() {
-    var record Record
-    record.identifier = Value{Container{},"module"}
-    record.block.identifier = Value{Container{},"x"}
-    record.block.method = Value{Container{},"Integer"}
-    record.block.args.key = Value{Container{0,1},"0"}
-    record.block.args.value = Value{Container{0,1},"0"}
+    
 }
