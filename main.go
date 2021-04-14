@@ -22,7 +22,7 @@ type Declaration struct {
     name Value
 }
 
-type MethodCall struct {
+type Unit struct {
     identifier Value
     method Value
     args List
@@ -44,6 +44,36 @@ type Loop struct {
 
 type Module struct {
     moduleType int   
+}
+
+type Result struct {
+     call result
+     value Value
+}
+
+type Variant struct {
+    result Result
+    ttype Type
+}
+
+type Proof struct {
+    sum Unit
+    leaf Unit
+}
+
+type Type struct {
+    dependentType Proof
+    result proof
+}
+
+type List struct {
+     key Type
+     value Type
+}
+
+type Graph struct {
+    edge Proof;
+    vertice List;
 }
 
 func main() {
