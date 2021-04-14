@@ -13,8 +13,6 @@ type Value struct {
 }
 
 type Error struct {
-     reason Value
-     solution Value
 }
 
 type Declaration struct {
@@ -43,12 +41,12 @@ type Loop struct {
 //code module
 
 type Module struct {
-    moduleType int   
+	
 }
 
 type Result struct {
-     call result
-     value Value
+     call Unit
+     value Proof
 }
 
 type Variant struct {
@@ -63,7 +61,7 @@ type Proof struct {
 
 type Type struct {
     dependentType Proof
-    result proof
+    result Result
 }
 
 type List struct {
@@ -71,10 +69,15 @@ type List struct {
      value Type
 }
 
-type Graph struct {
-    edge Proof;
-    vertice List;
+type GraphVertice struct {
+    vertice List
 }
+
+type GraphEdge struct {
+    edge proof 
+}
+
+
 
 func main() {
     
