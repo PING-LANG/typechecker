@@ -74,7 +74,13 @@ type GraphVertice struct {
 }
 
 type GraphEdge struct {
-    edge proof 
+    vertice List
+    edge GraphVertice;
+}
+
+type Graph struct {
+    vertices []GraphVertice
+    edges []GraphEdge
 }
 
 
